@@ -3,10 +3,13 @@ import { FaThLarge, FaUserFriends, FaFileAlt, FaCog } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import './sidebar.css'
 import { FaXmark } from "react-icons/fa6";
+import { useDispatch, useSelector } from 'react-redux';
+import { menuToggle } from '../features/sidebarSlice';
 
-const Sidebar = ({ toggle, setToggle }) => {
+const Sidebar = () => {
 
-
+    const toggle = useSelector(state => state.sidebarReducer.menuToggle)
+    const dispatch = useDispatch()
 
     const values = [
         {
@@ -38,9 +41,9 @@ const Sidebar = ({ toggle, setToggle }) => {
             left: '0',
         } : {}}>
             <div className='absolute left-48 py-2.5 px-1.5 cursor-pointer x-icon'>
-                <FaXmark size={25} onClick={() => {
-                    setToggle(!toggle)
-                }} />
+                <FaXmark size={25}
+                    onClick={() => dispatch(menuToggle(!toggle))}
+                />
             </div>
             <div className=' bg-[#573A9E] h-screen rounded-tr-3xl'>
                 <div className='py-5 text-center font-bold text-white tracking-normal'>Platform</div>

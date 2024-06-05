@@ -3,11 +3,11 @@ import Sidebar from '../components/Sidebar'
 import { Outlet } from 'react-router-dom'
 import './homeLayout.css'
 
-const MainLayout = ({ toggle, setToggle }) => {
+const MainLayout = () => {
     return (
         <div className='flex-container w-full'>
             <div className='sidebar'>
-                <Sidebar toggle={toggle} setToggle={setToggle} />
+                <Sidebar />
             </div>
             <div className='outlet'>
                 <Outlet />

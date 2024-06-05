@@ -11,20 +11,20 @@ import MainLayout from './layouts/MainLayout';
 
 const App = () => {
 
-  const [toggle, setToggle] = useState(false)
+
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <MainLayout toggle={toggle} setToggle={setToggle} />,
+      element: <MainLayout />,
       children: [
         {
           index: true,
-          element: <Dashboard toggle={toggle} setToggle={setToggle} />,
+          element: <Dashboard />,
         },
         {
           path: "dashboard",
-          element: <Dashboard toggle={toggle} setToggle={setToggle} />,
+          element: <Dashboard />,
         },
         {
           path: "connect",

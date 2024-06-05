@@ -3,18 +3,20 @@ import { FaBell, FaCircle } from 'react-icons/fa';
 import { FaAngleUp, FaAngleDown } from "react-icons/fa6";
 import SelectOption from '../components/SelectOption';
 import { AiOutlineMenuUnfold } from "react-icons/ai";
+import { useDispatch, useSelector } from 'react-redux';
+import { menuToggle } from '../features/sidebarSlice';
 
 
-const Dashboard = ({ toggle, setToggle }) => {
+const Dashboard = () => {
+
+    const toggle = useSelector(state => state.sidebarReducer.menuToggle)
+    const dispatch = useDispatch()
+
     return (
         <div className='text-slate-500 w-full'>
             <div className='flex justify-between  px-5 py-3'>
                 <div className='flex gap-2 m-icon'>
-
-                    <AiOutlineMenuUnfold style={{ cursor: 'pointer' }} color={'black'} size={20} onClick={() => setToggle(!toggle)} />
-
-
-
+                    <AiOutlineMenuUnfold style={{ cursor: 'pointer' }} color={'black'} size={20} onClick={() => dispatch(menuToggle(!toggle))} />
                 </div>
                 <div className='flex gap-5'>
                     <FaBell />
