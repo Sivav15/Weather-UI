@@ -37,15 +37,11 @@ const Sidebar = () => {
 
 
     return (
-        <nav className='nav-bar relative' style={toggle ? {
+        <nav className='nav-bar flex bg-blue fixed z-10' style={toggle ? {
             left: '0',
         } : {}}>
-            <div className='absolute left-48 py-2.5 px-1.5 cursor-pointer x-icon'>
-                <FaXmark size={25}
-                    onClick={() => dispatch(menuToggle(!toggle))}
-                />
-            </div>
-            <div className=' bg-[#573A9E] h-screen rounded-tr-3xl'>
+
+            <div className='  bg-[#573A9E] h-screen rounded-tr-3xl' style={{}}>
                 <div className='py-5 text-center font-bold text-white tracking-normal'>Platform</div>
                 {values.map((item, index) => (
                     <NavLink
@@ -60,6 +56,11 @@ const Sidebar = () => {
                         {item.name}
                     </NavLink>
                 ))}
+            </div>
+            <div className=' py-2.5 px-1.5 cursor-pointer x-icon'>
+                <FaXmark size={25}
+                    onClick={() => dispatch(menuToggle(!toggle))}
+                />
             </div>
         </nav>
     );

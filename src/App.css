@@ -7,6 +7,10 @@ body{
   visibility: hidden;
 }
 
+
+
+
+
 @media (max-width: 950px) {
   .m-icon{
    visibility: visible;

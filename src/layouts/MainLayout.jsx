@@ -6,7 +6,7 @@ import './homeLayout.css'
 const MainLayout = () => {
     return (
         <div className='flex-container w-full'>
-            <div className='sidebar'>
+            <div className='sidebar' >
                 <Sidebar />
             </div>
             <div className='outlet'>

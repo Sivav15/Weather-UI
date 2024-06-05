@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-
 import Connect from './pages/Connect';
 import Report from './pages/Report';
 import Settings from './pages/Settings';
