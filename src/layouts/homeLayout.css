@@ -1,0 +1,30 @@
+.flex-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+
+}
+
+.sidebar {
+    min-width: 15%;
+ 
+}
+
+.outlet {
+
+    min-width: 80%;
+}
+
+
+
+@media (max-width: 950px) {
+   
+    .sidebar {
+        min-width: 0;
+    }
+    
+    .outlet {
+        min-width: 100%;
+    }
+ 
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
@@ -10,18 +10,21 @@ import MainLayout from './layouts/MainLayout';
 
 
 const App = () => {
+
+  const [toggle, setToggle] = useState(false)
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <MainLayout />,
+      element: <MainLayout toggle={toggle} setToggle={setToggle} />,
       children: [
         {
           index: true,
-          element: <Dashboard />,
+          element: <Dashboard toggle={toggle} setToggle={setToggle} />,
         },
         {
           path: "dashboard",
-          element: <Dashboard />,
+          element: <Dashboard toggle={toggle} setToggle={setToggle} />,
         },
         {
           path: "connect",

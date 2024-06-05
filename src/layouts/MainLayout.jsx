@@ -1,14 +1,15 @@
 import React from 'react'
 import Sidebar from '../components/Sidebar'
 import { Outlet } from 'react-router-dom'
+import './homeLayout.css'
 
-const MainLayout = () => {
+const MainLayout = ({ toggle, setToggle }) => {
     return (
-        <div className='flex'>
-            <div className='w-[12%]'>
-                <Sidebar />
+        <div className='flex-container w-full'>
+            <div className='sidebar'>
+                <Sidebar toggle={toggle} setToggle={setToggle} />
             </div>
-            <div className='w-[88%]'>
+            <div className='outlet'>
                 <Outlet />
             </div>
         </div>

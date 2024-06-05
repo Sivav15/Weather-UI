@@ -3,7 +3,13 @@ body{
 }
 
 
+.m-icon{
+  visibility: hidden;
+}
 
-  .ant-select-selection {
-    background-color: transparent;
+@media (max-width: 950px) {
+  .m-icon{
+   visibility: visible;
   }
+
+}

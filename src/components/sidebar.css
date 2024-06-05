@@ -1,0 +1,21 @@
+
+.nav-bar{
+    width: 12rem;
+    transition: left 0.3s ease
+}
+
+.x-icon{
+    visibility: hidden;
+   }
+
+@media (max-width: 950px) {
+   .nav-bar{
+    position: absolute;
+    left : -400px;
+     top : 0;
+   }
+   .x-icon{
+    visibility: visible;
+   }
+ 
+}
