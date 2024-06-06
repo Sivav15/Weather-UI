@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Connect from './pages/Connect';
 import Report from './pages/Report';
 import Settings from './pages/Settings';
@@ -18,8 +18,8 @@ const App = () => {
       element: <MainLayout />,
       children: [
         {
-          index: true,
-          element: <Dashboard />,
+          path: "/",
+          element: <Navigate to="/dashboard" replace />,
         },
         {
           path: "dashboard",
