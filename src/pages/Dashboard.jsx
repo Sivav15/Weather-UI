@@ -14,10 +14,10 @@ const Dashboard = () => {
     const dispatch = useDispatch()
 
     return (
-        <div className='text-slate-500 w-full'>
+        <div className='text-slate-500 w-full '>
             <div className='flex justify-between  px-5 py-3 sticky top-0 bg-[#F7ECEB]'>
                 <div className='flex gap-2 m-icon'>
-                    <AiOutlineMenuUnfold style={{ cursor: 'pointer' }} color={'black'} size={20} onClick={() => dispatch(menuToggle(!toggle))} />
+                    <AiOutlineMenuUnfold style={{ cursor: 'pointer' }} color={'black'} size={25} onClick={() => dispatch(menuToggle(!toggle))} />
                 </div>
                 <div className='flex gap-5'>
                     <FaBell />
