@@ -9,7 +9,7 @@ const MainLayout = () => {
             <div className='sidebar' >
                 <Sidebar />
             </div>
-            <div className='outlet'>
+            <div className='outlet mx-auto'>
                 <Outlet />
             </div>
         </div>

@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const Item = ({ item }) => {
+
+
+const Item = ({ item, classes }) => {
     return (
-        <div style={{ width: item.width, height: item.height, backgroundColor: 'red' }}>
-            {item.content}
+        <div style={{ backgroundColor: "red" }} className='item'>
+            {/* {item.content} */}
         </div>
     );
 };
 
-export default Item
+export default Item;
