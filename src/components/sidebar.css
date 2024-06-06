@@ -8,7 +8,7 @@
     visibility: hidden;
    }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
    .nav-bar{
     position: absolute;
     left : -400px;
